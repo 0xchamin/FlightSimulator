@@ -1,5 +1,7 @@
 # Global Flight RL Simulator
 
+![Demo](demo.gif)
+
 A browser-based reinforcement learning educational game that teaches core RL concepts through realistic drone navigation between global destinations.
 
 ## Features

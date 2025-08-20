@@ -1,0 +1,69 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Flight RL Simulator</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="map-container">
+        <div id="map"></div>
+        <div class="control-panel">
+            <h3>Flight Control</h3>
+            <p id="status">Click two points on the map to set route</p>
+            <div id="route-info" style="display: none;">
+                <p>Source: <span id="source-coords"></span></p>
+                <p>Destination: <span id="dest-coords"></span></p>
+            </div>
+            <div id="flight-controls" style="display: none;">
+                <label for="speed-slider">Flight Speed:</label>
+                <input type="range" id="speed-slider" min="1" max="10" value="5">
+                <span id="speed-value">5</span>
+                <button id="start-flight">Start Flight</button>
+            </div>
+            <div id="agent-selection">
+                <label for="agent-dropdown">Select Agent:</label>
+                <select id="agent-dropdown">
+                    <option value="#">Select flight option</option>
+                    <option value="manual">Manual Control</option>
+                    <option value="baseline">Baseline Agent</option>
+                    <option value="qlearning">Q-Learning Agent</option>
+                    <option value="dqn">DQN Agent</option>
+                </select>
+            </div>
+        </div>
+    </div><!-- / #map-container -->
+
+    <div id="analytics-panel">
+        <h2>Flight Analytics</h2>
+        
+        <div id="current-stats">
+            <h3>Current Flight</h3>
+            <p>Fuel: <span id="fuel-display">--</span>%</p>
+            <p>Speed: <span id="speed-display">--</span></p>
+            <p>Distance: <span id="distance-display">--</span> km</p>
+        </div>
+        
+        <div id="learning-progress">
+            <h3>Learning Progress</h3>
+            <p>Exploration Rate: <span id="exploration-display">--</span>%</p>
+            <p>Q-Values Learned: <span id="qtable-size">--</span></p>
+        </div>
+        
+        <div id="action-log">
+            <h3>Recent Actions</h3>
+            <div id="log-entries"></div>
+        </div>
+    </div><!--/ #analytics-panel-->
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/manual-controls.js"></script>
+    <script src="js/baseline-agent.js"></script>
+    <script src="js/qlearning-agent.js"></script>
+
+</body>
+</html>

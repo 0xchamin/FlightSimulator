@@ -1,0 +1,164 @@
+/* css/styles.css - CLEANED VERSION */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+
+#map {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#map-container {
+    width: 70%;
+    position: relative;
+}
+
+#analytics-panel {
+    width: 30%;
+    background-color: #0f172a;
+    border-left: 2px solid #38bdf8;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+.control-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 2px solid #38bdf8;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1000;
+    min-width: 320px;
+    max-width: 400px;
+    backdrop-filter: blur(5px);
+}
+
+.control-panel h3 {
+    color: #f97316;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.control-panel p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#route-info {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #38bdf8;
+}
+
+#flight-controls {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #38bdf8;
+}
+
+#flight-controls label {
+    display: block;
+    margin-bottom: 5px;
+    color: #38bdf8;
+    font-size: 14px;
+}
+
+#speed-slider {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#speed-value {
+    color: #f97316;
+    font-weight: bold;
+}
+
+#start-flight {
+    background-color: #22c55e;
+    color: #0f172a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#start-flight:hover {
+    background-color: #16a34a;
+}
+
+#agent-selection {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #38bdf8;
+}
+
+#agent-selection label {
+    display: block;
+    margin-bottom: 5px;
+    color: #38bdf8;
+    font-size: 14px;
+}
+
+#agent-dropdown {
+    width: 100%;
+    padding: 5px;
+    background-color: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #38bdf8;
+    border-radius: 4px;
+}
+
+#analytics-panel h2 {
+    color: #f97316;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 10px;
+}
+
+#analytics-panel h3 {
+    color: #38bdf8;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#current-stats, #learning-progress, #action-log {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #38bdf8;
+    border-radius: 5px;
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+#log-entries {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.log-entry {
+    margin-bottom: 5px;
+    padding: 3px;
+    border-left: 2px solid #f97316;
+    padding-left: 8px;
+}
